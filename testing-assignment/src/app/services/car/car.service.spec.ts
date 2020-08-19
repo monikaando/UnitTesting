@@ -1,5 +1,4 @@
 import {CarService} from './car.service';
-import {async, TestBed} from '@angular/core/testing';
 
 describe('CarService', () => {
   let carService: any;
@@ -16,3 +15,4 @@ describe('CarService', () => {
   it(`should get a car object and return: 'A Maserati Quattroporte from 2018 is a fine car!'`, () => {
     expect(carService.getCar(newCar)).toEqual('A Maserati Quattroporte from 2018 is a fine car!');
   });
+});
