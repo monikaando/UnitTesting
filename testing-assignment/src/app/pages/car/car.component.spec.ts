@@ -22,4 +22,17 @@ describe('CarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should create an array after initialisation', () => {
+    component.ngOnInit();
+    expect(component.cars).toBeTruthy();
+  });
+  it('should the length of the array be equal 2', () => {
+    expect(component.cars.length).toEqual(2)
+  });
+  it('should call the Output() when click on the car', () =>{
+    spyOn(component,'selectCar');
+    let carLink = fixture.nativeElement.querySelector('p')
+    carLink.click();
+    expect(component.selectCar).toHaveBeenCalled();
+  });
 });
