@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CarComponent } from './car.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {CarComponent} from './car.component';
 
 describe('CarComponent', () => {
   let component: CarComponent;
@@ -8,9 +7,9 @@ describe('CarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarComponent ]
+      declarations: [CarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -27,11 +26,11 @@ describe('CarComponent', () => {
     expect(component.cars).toBeTruthy();
   });
   it('should the length of the array be equal 2', () => {
-    expect(component.cars.length).toEqual(2)
+    expect(component.cars.length).toEqual(2);
   });
-  it('should call the Output() when click on the car', () =>{
-    spyOn(component,'selectCar');
-    let carLink = fixture.nativeElement.querySelector('p');
+  it('should call the Output() when click on the car', () => {
+    spyOn(component, 'selectCar');
+    const carLink = fixture.nativeElement.querySelector('p');
     carLink.click();
     expect(component.selectCar).toHaveBeenCalled();
   });
