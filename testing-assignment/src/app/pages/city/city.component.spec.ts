@@ -26,13 +26,13 @@ describe('CityComponent', () => {
 
   it(`should get 'Haarlem' for city variable from ngOnInit.`, () => {
     fixture.detectChanges();
-    expect(component.city).toBe('Haarlem');
+    expect(component.city).toEqual('Haarlem');
   });
 
   it(`should change city variable to 'Amsterdam'`, () => {
     fixture.detectChanges();
     component.city = 'Amsterdam';
-    expect(component.city).toBe('Amsterdam');
+    expect(component.city).toEqual('Amsterdam');
   })
 
   it(`should render city name: 'Haarlem' on the page`, () => {
