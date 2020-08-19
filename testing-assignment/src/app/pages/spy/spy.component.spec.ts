@@ -36,7 +36,6 @@ describe('SpyComponent', () => {
   it('should call deleteCity when click Delete button', () => {
     spyOn(component, 'deleteCity');
     const deleteButton = fixture.nativeElement.querySelector('.btnDelete');
-    console.log('deleteButton', deleteButton);
     deleteButton.click();
     expect(component.deleteCity).toHaveBeenCalled();
   });
