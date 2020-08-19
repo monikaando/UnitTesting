@@ -22,21 +22,26 @@ describe('SpyComponent', () => {
         ];
       });
   }));
+
   it('should have array length equal 2', () => {
     expect(component.cities.length).toEqual(2);
   });
+
   it('should add the city and have array length 3', () => {
     component.addCity('Gouda');
     expect(component.cities.length).toEqual(3);
   });
+
   it('should delete the city and have array length 2', () => {
     component.deleteCity({id: 3, name: 'Gouda', province: 'Unknown'});
     expect(component.cities.length).toEqual(2);
   });
+
   it('should call deleteCity when click Delete button', () => {
     spyOn(component, 'deleteCity');
     const deleteButton = fixture.nativeElement.querySelector('.btnDelete');
     deleteButton.click();
     expect(component.deleteCity).toHaveBeenCalled();
   });
+
 });

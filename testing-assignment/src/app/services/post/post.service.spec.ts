@@ -33,17 +33,19 @@ describe('PostService', () => {
     postService = TestBed.inject(PostService);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
+
   it('should connect with API and return array of posts', () => {
     postService.getPosts()
       .subscribe(posts => {
         expect(posts).toBeTruthy();
         expect(posts.length).toEqual(3);
         expect(posts[0].id).toEqual(1);
-        expect(posts[0].title).toEqual('Title one');
-        expect(posts[0].body).toEqual('Text one');
+        expect(posts[1].title).toEqual('Title two');
+        expect(posts[2].body).toEqual('Text three');
       });
     const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/posts');
     expect(req.request.method).toBe('GET');
     req.flush(mockPosts);
   });
+
 });

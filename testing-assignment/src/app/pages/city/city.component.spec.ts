@@ -40,4 +40,5 @@ describe('CityComponent', () => {
     fixture.detectChanges();
     expect(compiled.querySelector('h1').textContent).toContain('Haarlem');
   });
+
 });
