@@ -31,7 +31,7 @@ describe('CarComponent', () => {
   });
   it('should call the Output() when click on the car', () =>{
     spyOn(component,'selectCar');
-    let carLink = fixture.nativeElement.querySelector('p')
+    let carLink = fixture.nativeElement.querySelector('p');
     carLink.click();
     expect(component.selectCar).toHaveBeenCalled();
   });
