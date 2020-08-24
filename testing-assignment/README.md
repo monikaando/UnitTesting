@@ -1,27 +1,31 @@
-# TestingAssignment
+# My solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+## Provide one or multiple examples of code that you’re proud of and explain why.  Please link the file/lines from Gitlab.
+- post.service, GET and flush was the most difficult task but doable 
 
-## Development server
+## If you can, provide some examples of code that you’re not proud of and explain why. Please link the file/lines from Gitlab.
+- post.service:
+const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/posts');
+I am not sure if I should pass the whole link here.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## What are some ways you would like to improve the application if you had time?
+- provide errors messages
 
-## Code scaffolding
+## What issues did you run into and how did you solve them?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Issue: httpTestingController
+Paste the whole link
 
-## Build
+## Research topics
+What topics did you come across that you particularly liked or found interesting?
+- Unit Testing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## What topics did you come across that you’d like to learn more about?
+- Unit Testing
 
-## Running unit tests
+# Assignment
+## What did you like about the assignment?
+- Unit Testing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## What didn’t you like about the assignment?
+- nothing
